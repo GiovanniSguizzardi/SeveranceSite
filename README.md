@@ -2,7 +2,6 @@
 
 <hr>
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/0a69a03c-17d6-440a-bdb9-36212fa78252" alt="Logo"> </p>
 <p align="center">Um site sobre a série Severance, onde você poderá ver tudo de mais recente e discutir com outras pessoas.</p>
 
 ## Tecnologias
