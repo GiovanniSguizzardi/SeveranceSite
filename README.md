@@ -9,4 +9,4 @@
 * CSS
 
 ## Screenshots
-![Screenshot da tela inicial](![image](https://github.com/user-attachments/assets/33c53de3-c218-41f2-a3d9-d663e8899a0e)
+(![image](https://github.com/user-attachments/assets/33c53de3-c218-41f2-a3d9-d663e8899a0e)
