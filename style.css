@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* Reset básico */
 * {
     margin: 0;
@@ -5,226 +8,324 @@
     box-sizing: border-box;
 }
 
-.michroma-regular {
-    font-family: "Michroma", serif;
-    font-weight: 400;
-    font-style: normal;
-  }  
-
-
 /* Corpo e tipografia */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #212922;
-    color: #FFFFFF;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Cabeçalho */
-header {
-    background: #294936;
-    padding: 1.5rem 2rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 2px solid #5B8266;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
-    font-family: 'Michroma', serif;
-}
-
-nav {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-x: hidden; /* Evita rolagem lateral */
 }
 
-nav a {
-    color: #5B8266;
+/* Links e navegação */
+li, a {
+    font-family: "Michroma", serif;
+    font-size: 18px;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #FFFFFF;
-}
-
-/* Seção Hero */
-.hero {
-    background: url('img/background01.jpg') no-repeat center center/cover;
-    height: 90vh;
+/* HEADER */
+header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 2rem;
-}
-
-/* Camada semitransparente */
-.hero::after {
-    content: "";
-    position: absolute;
+    padding: 20px 100px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(33, 41, 34, 0.7);
+    z-index: 1000;
 }
 
-.hero-content {
+/* Logo */
+.logo_lumon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo_lumon:hover{
+    cursor: pointer;
+}
+
+/* MENU DE NAVEGAÇÃO */
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav_links li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
     position: relative;
-    z-index: 1;
-    max-width: 800px;
-    text-align: center;
 }
 
-.hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-family: 'Michroma', sans-serif;
+/* Barra vertical entre os links */
+.nav_links li:not(:last-child)::after {
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    margin-left: 15px;
+    position: absolute;
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.inside_top{
+    font-family: "Michroma", serif;
+    font-size: 48px;
+}
+.inside_bottom{
+    font-size: 20px;
+    font-family: "Inter", serif;
 }
 
-.hero-content p {
-    font-size: 1.4rem;
+.inside_top, .inside_bottom{
+    color: #fff; 
 }
 
-/* Seções */
-section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    border-bottom: 3px solid #5B8266;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    font-family: 'Michroma', sans-serif;
-}
-
-/* Sinopse */
-#sinopse p {
-    font-size: 1.2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: justify;
-}
-
-/* Seção Carrosséis */
-.carousel {
-    margin-top: 2rem;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-}
-
-.slick-slide {
-    padding: 0 15px;
-}
-
-.slick-list {
-    margin: 0 -15px;
-}
-
-/* Novo modelo de Cards */
-.stack {
-    width: 100%;
-    max-width: 300px;
-    transition: 0.25s ease;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.stack:hover {
-    transform: rotate(3deg);
-}
-
-.card {
-    width: 100%;
-    border: 3px solid #5B8266;
-    background-color: #294936;
-    padding: 10px;
-    text-align: center;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 420px;
-    align-items: center;
-}
-
-.card h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 0.8rem;
-    font-family: 'Michroma', sans-serif;
-}
-
-.card p {
-    font-size: 0.9rem;
-    color: #C0C0C0;
-    margin-top: 0.5rem;
-    flex-grow: 1;
+/* CANVAS RESPONSIVO */
+main {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-/* Imagem do Card */
-.image {
+    flex-grow: 1;
     width: 100%;
-    height: 200px;
-    border: 3px solid #5B8266;
-    background-color: #eee;
-    background-size: cover;
-    background-position: center;
-    flex-shrink: 0;
+    margin-top: 100px; /* Para evitar sobreposição com o header */
 }
 
-@supports (aspect-ratio: 1 / 1) {
-    .browser-warning {
+canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 70vh;
+    
+}
+
+/* MENU HAMBÚRGUER PARA CELULARES */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+/* SINOPSE */
+.titulo_sinopse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Michroma", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    margin-top: 300px;
+    color: #fff;
+    padding-bottom: 10px; /* Pequeno espaçamento para a linha */
+    position: relative; /* Para que ::before se posicione em relação a este elemento */
+}
+
+.titulo_sinopse::after {
+    content: "";
+    width: 230px; /* Ajuste o tamanho da linha em relação ao texto */
+    height: 3px;
+    background: linear-gradient(90deg, rgba(34,76,116,1) 0%, rgba(41,73,54,1) 100%);
+    position: absolute;
+    bottom: 5px; /* Distância abaixo do texto */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a linha */
+}
+
+.texto_sinopse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-family: "Inter", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    color: #fff;
+    padding-top: 40px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+/* PERSONAGENS */
+
+.titulo_personagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Michroma", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    margin-top: 300px;
+    color: #fff;
+    padding-bottom: 10px; /* Pequeno espaçamento para a linha */
+    position: relative; /* Para que ::before se posicione em relação a este elemento */
+}
+
+.titulo_personagens::before{
+    content: "";
+    width: 380px; /* Ajuste o tamanho da linha em relação ao texto */
+    height: 3px;
+    background: linear-gradient(90deg, rgba(34,76,116,1) 0%, rgba(41,73,54,1) 100%);
+    position: absolute;
+    bottom: 5px; /* Distância abaixo do texto */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a linha */
+}
+
+/* CRACHÁS */
+
+.img-hanger {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 300px;
+    height: 450px;
+    transform-origin: center -20px;
+    transition: transform 0.8s ease-out;
+    animation: swing 2s ease-in-out alternate infinite;
+    animation-play-state: paused;
+    transform: rotate(0deg); /* Garante que inicie reto */
+}
+
+/* Animação de balanço */
+@keyframes swing {
+    0% {
+        transform: rotate(0deg); /* Começa reto */
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(15deg); /* Balança para a direita */
+    }
+}
+
+/* Ativa a animação ao passar o mouse */
+.img-hanger:hover {
+    animation: swing 2s ease-in-out alternate infinite;
+}
+
+/* Garante que volte ao estado reto quando o mouse sair */
+.img-hanger:not(:hover) {
+    animation: none;
+    transform: rotate(0deg);
+} 
+
+/* Elementos decorativos do suporte do crachá */
+.img-hanger::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: -40px;
+    left: 50%;
+    border-radius: 50%;
+}
+
+.img-hanger::after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 40px;
+    top: -35px;
+    left: 50%;
+    z-index: -1;
+}
+
+/* Imagem dentro do crachá */
+.img-hanger img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 50px;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        border-radius: 5px;
+        text-align: center;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav_links.active {
+        transform: scaleY(1);
+        display: flex;
+    }
+
+    .nav_links li {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav_links li:not(:last-child)::after {
         display: none;
     }
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .carousel {
-        width: 90%;
+@media (max-width: 800px) {
+    li, a {
+        font-size: 14px;
+    }
+    
+    canvas {
+        width: 90vw;
+        height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 30px;
+    }
+    
+    .logo_lumon {
+        max-width: 120px;
     }
 
-    .stack {
-        max-width: 250px;
-    }
-
-    .card {
-        height: auto;
-    }
-
-    .card h3 {
-        font-size: 1.1rem;
-    }
-
-    .card p {
-        font-size: 0.85rem;
+    canvas {
+        width: 95vw;
+        height: 50vh;
     }
 }

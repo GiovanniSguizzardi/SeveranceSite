@@ -3,152 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ruptura Fã-Site</title>
+    <title>LUMON-WIKI</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Importando bibliotecas para o carrossel -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-    </style>
 </head>
-<body>
 
-    <!-- Cabeçalho -->
+<body>
     <header>
-        <h1>Ruptura</h1>
+        <img src="./img/Lumon_Name.png" class="logo_lumon" alt="logo_lumon" id="logo">
+        <div class="menu-toggle">&#9776;</div> <!-- Ícone do menu hambúrguer -->
         <nav>
-            <a href="#sinopse">Sinopse</a>
-            <a href="#episodios">Episódios</a>
-            <a href="#personagens">Personagens</a>
+            <ul class="nav_links">
+                <li><a href="#sinopse" class="options">SINOPSE</a></li>
+                <li><a href="#personagens" class="options">PERSONAGENS</a></li>
+                <li><a href="#temporadas" class="options">TEMPORADAS</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Seção Hero (Página Inicial) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Entre no Desconhecido</h2>
-            <p>Descubra os segredos ocultos de uma nova realidade.</p>
-        </div>
-    </section>
+    <main>
+        <canvas id="canvas1"></canvas> <!-- Tela do plokplok -->
+    </main>
 
-    <!-- Seção Sinopse -->
+    <span class="inside_top">Entre no Desconhecido</span>
+    <span class="inside_bottom">Descubra os segredos ocultos de uma nova realidade.</span>
+
     <section id="sinopse">
-        <div class="content">
-            <h2>Sinopse</h2>
-            <p>
-                Em um mundo onde a linha entre a vida profissional e pessoal foi redefinida, a Lumon Industries desenvolveu um 
-                procedimento inovador conhecido como "Ruptura". Esse processo separa as memórias dos funcionários entre suas 
-                versões do trabalho e suas versões fora da empresa, garantindo que um nunca saiba nada sobre o outro. 
-                <br><br>
-                Mark Scout, um dos empregados que passaram pela Ruptura, começa a questionar sua realidade quando eventos 
-                estranhos e mensagens ocultas começam a surgir dentro da empresa. Conforme ele e seus colegas investigam a 
-                verdade, descobrem segredos perturbadores sobre a organização e suas verdadeiras intenções.
-            </p>
-        </div>
+        <h2 class="titulo_sinopse">SINOPSE</h2>
+        <p class="texto_sinopse">Em um futuro próximo, a empresa Lumon Industries desenvolveu um procedimento inovador chamado severance, que separa completamente as memórias dos funcionários entre o trabalho e a vida pessoal. Durante o expediente, eles não lembram nada de suas vidas fora da empresa; ao sair, esquecem tudo o que aconteceu no trabalho. Essa divisão radical cria duas versões de cada pessoa: uma que só existe no escritório e outra que nunca sabe o que faz lá dentro.</p>
+        <p class="texto_sinopse">Mark Scout, um dos empregados da Lumon, trabalha no setor de Refinamento de Dados e lidera uma pequena equipe submetida a essa separação mental. Apesar da rotina estranha e cheia de mistérios, ele e seus colegas seguem as regras da empresa sem questionar. No entanto, quando um ex-colega aparece com informações alarmantes sobre a Lumon, Mark começa a suspeitar que há algo muito errado acontecendo.</p>
+        <p class="texto_sinopse">Conforme Mark investiga, ele percebe que a empresa esconde segredos profundos sobre o programa severance e seus verdadeiros propósitos. O que parecia ser uma simples divisão entre vida profissional e pessoal se revela uma experiência mais sombria e controladora do que ele poderia imaginar. Ao mesmo tempo, seus colegas começam a desenvolver dúvidas e conflitos internos sobre sua identidade e liberdade.</p>
+        <p class="texto_sinopse">A série mistura ficção científica e suspense psicológico para explorar temas como controle corporativo, ética no trabalho e identidade. Com um ambiente minimalista e perturbador, Severance desafia a ideia de equilíbrio entre vida profissional e pessoal, mostrando as consequências extremas de separar completamente as duas esferas.</p>
     </section>
 
-    <!-- Seção Episódios -->
-    <section id="episodios">
-        <div class="content">
-            <h2>Episódios</h2>
-            <div class="carousel">
-                <div class="stack">
-                    <div class="card">
-                        <div class="image" style="background-image: url('img/episodio1.jpg');"></div>
-                        <h3>EP 1 - Good News About Hell</h3>
-                        <p>Mark lidera uma equipe de funcionários cujas memórias foram cirurgicamente divididas entre trabalho e vida pessoal.</p>
-                    </div>
-                </div>
-                <div class="stack">
-                    <div class="card">
-                        <div class="image" style="background-image: url('img/episodio2.jpg');"></div>
-                        <h3>EP 2 - Half Loop</h3>
-                        <p>Helly é orientada em seu primeiro dia; Mark recebe uma visita inesperada.</p>
-                    </div>
-                </div>
-                <div class="stack">
-                    <div class="card">
-                        <div class="image" style="background-image: url('img/episodio3.jpg');"></div>
-                        <h3>EP 3 - In Perpetuity</h3>
-                        <p>Mark leva Helly a um museu secreto da Lumon enquanto Irving encontra um novo aliado.</p>
-                    </div>
-                </div>
-                <div class="stack">
-                    <div class="card">
-                        <div class="image" style="background-image: url('img/episodio4.jpg');"></div>
-                        <h3>EP 4 - The You You Are</h3>
-                        <p>A equipe começa a perceber a verdade por trás do trabalho que realizam.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Personagens -->
     <section id="personagens">
-        <div class="content">
-            <h2>Personagens</h2>
-            <div class="carousel">
-                <div class="stack">
-                    <div class="card">
-                        <div class="image" style="background-image: url('img/mark_s.jpg');"></div>
-                        <h3>Mark Scout</h3>
-                        <p>O protagonista da série, um funcionário da Lumon que começa a questionar sua realidade.</p>
-                    </div>
-                </div>
-                <div class="stack">
-                    <div class="card">
-                        <div class="image" style="background-image: url('img/helly_r.jpg');"></div>
-                        <h3>Helly R.</h3>
-                        <p>Uma nova contratada que se recusa a aceitar sua vida "dentro" da empresa.</p>
-                    </div>
-                </div>
-                <div class="stack">
-                    <div class="card">
-                        <div class="image" style="background-image: url('img/irving.jpg');"></div>
-                        <h3>Irving</h3>
-                        <p>Um funcionário veterano que segue as regras com devoção.</p>
-                    </div>
-                </div>
-                <div class="stack">
-                    <div class="card">
-                        <div class="image" style="background-image: url('img/dylan.jpg');"></div>
-                        <h3>Dylan</h3>
-                        <p>Um dos funcionários mais dedicados, mas que começa a questionar a empresa.</p>
-                    </div>
-                </div>
-            </div>
+        <h2 class="titulo_personagens">PERSONAGENS</h2>
+        <div class="carousel-container">
+            <div class="img-hanger"><img src="./img/cracha/mark.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/burt.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/doug.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/dylan.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/gemma.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/harmony-cobel.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/helly.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/irving.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/mister-milchick.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/ms-huang.png"></div>
+            <div class="img-hanger"><img src="./img/cracha/natalie.png"></div>
         </div>
     </section>
 
-
-    <!-- Script para inicializar o carrossel -->
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.carousel').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                arrows: true,
-                dots: true,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
+    <script src="script.js"></script> 
 </body>
 </html>
